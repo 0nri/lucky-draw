@@ -39,6 +39,9 @@
             addCandidate: function(v) {
                 $.post('/addCandidate', {'candidate': v});
             },
+            addGSheetLink: function(v) {
+                $.post('/gsheet', {'url': v});
+            },
             removeCandidate: function (v) {
                 $.post('/removeCandidate', { 'candidate': v });
             },
