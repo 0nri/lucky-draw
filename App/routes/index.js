@@ -38,7 +38,7 @@ router.post('/gsheet', function(req, res) {
     var shareableLink = req.body.url;
     if (shareableLink && shareableLink !== "") {
         console.log("Google Sheet shareable link: " + shareableLink);
-        var gSheetId = shareableLink.match(/.+spreadsheets\/d\/([a-zA-Z0-9_]+)/);
+        var gSheetId = shareableLink.match(/.+spreadsheets\/d\/([a-zA-Z0-9_-]+)/);
         if(gSheetId) {
             gSheetId = gSheetId[1];
             console.log("Sheet Id: " + gSheetId);
